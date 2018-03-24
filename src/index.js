@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Containers
+import App from './containers/App';
+
+ReactDOM.render(
+  <HashRouter>
+    <Switch>
+      <Route path="/" name="Home" component={App} />
+    </Switch>
+  </HashRouter>,
+  document.getElementById('root'),
+);
