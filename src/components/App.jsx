@@ -1,8 +1,12 @@
+// @flow
+
 import React, { Component } from 'react';
 import logo from '../assets/img/logo.svg';
 import './App.css';
 
-class App extends Component {
+class App extends Component<{||}> {
+  teste: string;
+  teste = 2;
   render() {
     return (
       <div className="App">
