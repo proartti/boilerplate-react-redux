@@ -6,12 +6,12 @@ module.exports = {
   app: {
     htmlAttributes: { lang: 'en' },
     title: 'Boilerplate React Redux',
-    titleTemplate: 'Boilerplate React Redux Starter - %s',
+    titleTemplate: 'Boilerplate React Redux - %s',
     meta: [
       {
         name: 'description',
-        content: 'The best react universal starter boilerplate in the world.',
-      },
-    ],
-  },
+        content: 'Boilerplate for React v16 - starter with some cool stuff.'
+      }
+    ]
+  }
 };

@@ -1,5 +1,4 @@
 /* @flow */
-/* eslint-disable */
 
 import React from 'react';
 // $FlowFixMe: isn't an issue
@@ -23,10 +22,12 @@ const render = (Routes: Array<Object>) => {
   hydrate(
     <AppContainer>
       <Provider store={store}>
-        <ConnectedRouter history={history}>{renderRoutes(Routes)}</ConnectedRouter>
+        <ConnectedRouter history={history}>
+          {renderRoutes(Routes)}
+        </ConnectedRouter>
       </Provider>
     </AppContainer>,
-    document.getElementById('react-view'),
+    document.getElementById('react-view')
   );
 };
 

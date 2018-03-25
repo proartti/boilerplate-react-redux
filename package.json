@@ -1,12 +1,38 @@
 {
   "name": "boilerplate-react-redux",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Boilerplate for React v16 - starter with some cool stuff",
   "main": "index.js",
   "engines": {
     "node": ">=6.0",
     "npm": ">=3.0"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proartti/boilerplate-react-redux"
+  },
+  "keywords": [
+    "starter",
+    "boilerpate",
+    "universal",
+    "react",
+    "redux",
+    "react router v4",
+    "express",
+    "webpack v3",
+    "es6",
+    "flow",
+    "code splitting",
+    "hot reloading",
+    "babel",
+    "postcss",
+    "jest",
+    "unit testing",
+    "performance optimizing"
+  ],
+  "author":
+    "Tiago Donatti <contact@tiagodonatti.net> (http://tiagodonatti.net)",
+  "license": "MIT",
   "scripts": {
     "start": "better-npm-run start",
     "start:dashboard": "webpack-dashboard yarn start",
@@ -44,13 +70,15 @@
       }
     },
     "build": {
-      "command": "webpack --progress --hide-modules --config ./tools/webpack/config.babel.js",
+      "command":
+        "webpack --progress --hide-modules --config ./tools/webpack/config.babel.js",
       "env": {
         "NODE_ENV": "production"
       }
     },
     "analyze": {
-      "command": "webpack --progress --hide-modules --config ./tools/webpack/config.babel.js",
+      "command":
+        "webpack --progress --hide-modules --config ./tools/webpack/config.babel.js",
       "env": {
         "NODE_ENV": "analyze"
       }
@@ -82,118 +110,6 @@
     "coveralls": {
       "command": "cat ./coverage/lcov.info | coveralls"
     }
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "useBuiltIns": true
-        }
-      ],
-      "react",
-      "stage-0",
-      "flow"
-    ],
-    "plugins": ["loadable-components/babel", "dynamic-import-node", "lodash"],
-    "env": {
-      "production": {
-        "plugins": ["transform-remove-console"]
-      }
-    }
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": ["plugin:lodash-fp/recommended", "airbnb", "prettier"],
-    "plugins": ["lodash-fp", "react", "prettier"],
-    "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "./tools/webpack/config.babel.js"
-        }
-      }
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "jest": true,
-      "es6": true
-    },
-    "rules": {
-      "global-require": "off",
-      "no-console": "off",
-      "no-underscore-dangle": "off",
-      "function-paren-newline": "off",
-      "react/jsx-filename-extension": [
-        "error",
-        {
-          "extensions": [".js", ".jsx"]
-        }
-      ],
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": true
-        }
-      ],
-      "jsx-a11y/anchor-is-valid": [
-        "error",
-        {
-          "specialLink": ["to"]
-        }
-      ],
-      "lodash-fp/use-fp": "off",
-      "lodash-fp/consistent-name": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true
-        }
-      ]
-    },
-    "globals": {
-      "__CLIENT__": true,
-      "__SERVER__": true,
-      "__DEV__": true
-    }
-  },
-  "eslintIgnore": ["tools/flow"],
-  "stylelint": {
-    "extends": ["stylelint-config-standard", "./node_modules/prettier-stylelint/config.js"],
-    "rules": {
-      "string-quotes": "single",
-      "selector-pseudo-class-no-unknown": [
-        true,
-        {
-          "ignorePseudoClasses": ["global", "local"]
-        }
-      ]
-    }
-  },
-  "jest": {
-    "setupFiles": ["raf/polyfill", "<rootDir>/tools/jest/setup.js"],
-    "globals": {
-      "__DEV__": true
-    },
-    "collectCoverageFrom": [
-      "src/containers/App/App.js",
-      "src/containers/Home/Home.js",
-      "src/containers/UserInfo/UserInfo.js",
-      "src/containers/NotFound/NotFound.js",
-      "src/components/**/*.js",
-      "src/actions/**/*.js",
-      "src/reducers/**/*.js",
-      "!src/reducers/index.js",
-      "!src/**/__tests__"
-    ],
-    "moduleNameMapper": {
-      ".*\\.(css|scss|sass)$": "<rootDir>/tools/jest/styleMock.js",
-      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/tools/jest/assetMock.js"
-    }
-  },
-  "nodemonConfig": {
-    "watch": ["src/server.js", "src/helpers/renderHtml.js"]
   },
   "browserslist": ["> 1%", "last 2 versions"],
   "dependencies": {

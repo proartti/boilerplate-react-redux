@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    "react",
+    "stage-0",
+    "flow"
+  ],
+  "plugins": ["loadable-components/babel", "dynamic-import-node", "lodash"],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}

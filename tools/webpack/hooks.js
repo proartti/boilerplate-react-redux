@@ -15,23 +15,23 @@ module.exports = () => {
     preprocessCss: (data, filename) =>
       sass.renderSync({
         data,
-        file: filename,
+        file: filename
       }).css,
     // Must be the same with the "context" of webpack LoaderOptionsPlugin
     // see here: https://github.com/css-modules/css-modules-require-hook/issues/86
     rootDir: path.resolve(process.cwd(), 'src'),
-    devMode: __DEV__,
+    devMode: __DEV__
   });
 
   // Images
   require('asset-require-hook')({
     extensions: ['gif', 'jpg', 'jpeg', 'png', 'webp'],
-    limit: 10240,
+    limit: 10240
   });
 
   // Fonts
   require('asset-require-hook')({
     extensions: ['woff', 'woff2', 'ttf', 'eot', 'svg'],
-    limit: 10240,
+    limit: 10240
   });
 };

@@ -59,14 +59,14 @@ if (!__DEV__) {
       quiet: true, // Turn it on for friendly-errors-webpack-plugin
       noInfo: true,
       stats: 'minimal',
-      serverSideRender: true,
-    }),
+      serverSideRender: true
+    })
   );
 
   app.use(
     require('webpack-hot-middleware')(compiler, {
-      log: false, // Turn it off for friendly-errors-webpack-plugin
-    }),
+      log: false // Turn it off for friendly-errors-webpack-plugin
+    })
   );
 }
 
@@ -84,7 +84,7 @@ app.get('*', (req, res) => {
         return Promise.all(
           route
             .loadData({ params: match.params, getState: store.getState })
-            .map(item => store.dispatch(item)),
+            .map(item => store.dispatch(item))
         );
       }
 
@@ -131,7 +131,15 @@ app.get('*', (req, res) => {
         // Pass the route and initial state into html template
         res
           .status(status)
-          .send(renderHtml(head, assets, htmlContent, initialState, loadableStateTag));
+          .send(
+            renderHtml(
+              head,
+              assets,
+              htmlContent,
+              initialState,
+              loadableStateTag
+            )
+          );
       });
     } catch (err) {
       res.status(404).send('Not Found :(');
@@ -153,5 +161,7 @@ if (port) {
     require('../tools/openBrowser')(url);
   });
 } else {
-  console.error(chalk.red('==> 😭  OMG!!! No PORT environment variable has been specified'));
+  console.error(
+    chalk.red('==> 😭  OMG!!! No PORT environment variable has been specified')
+  );
 }
