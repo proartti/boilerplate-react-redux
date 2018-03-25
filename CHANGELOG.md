@@ -1,3 +1,13 @@
+<a name="0.2.0"></a>
+
+# 0.2.0 (2018-03-25)
+
+### Features
+
+* **App**: Basic Containers and Components [e30615c38ee00fff584886986ee61618da3fe564](https://github.com/proartti/boilerplate-react-redux/commit/e30615c38ee00fff584886986ee61618da3fe564)
+* **App**: Redux implemented with basic configuration [e2dbf7b89b2a20ee0c69d7453a19ad100339882e](https://github.com/proartti/boilerplate-react-redux/commit/e2dbf7b89b2a20ee0c69d7453a19ad100339882e)
+* **App**: Webpack ejected to implement server side render [5c493b60eec657ec53a92260b989eaaef0726363](https://github.com/proartti/boilerplate-react-redux/commit/5c493b60eec657ec53a92260b989eaaef0726363)
+
 <a name="0.0.1"></a>
 
 # 0.0.1 (2018-03-24)
