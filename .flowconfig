@@ -1,0 +1,34 @@
+[ignore]
+<PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/.*/__tests__/.*
+
+[include]
+
+[libs]
+./node_modules/fbjs/flow/lib/dev.js
+; The app's global variables are declared here
+tools/flow/definitions
+
+[options]
+emoji=true
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+munge_underscores=false
+
+; Avoid CSS modules error
+module.name_mapper='^\(.*\)\.\(css\|scss\)$' -> '<PROJECT_ROOT>/tools/flow/stubs/CSSModules.js.flow'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+suppress_type=$FlowExpectedError
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
+
+[version]
+^0.66.0
