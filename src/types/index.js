@@ -9,15 +9,21 @@ import type { Reducers } from '../reducers';
 export type Home = {
   +readyStatus: string,
   +err: any,
-  +list: Array<Object>
+  +user: Object,
+  +home: any
 };
 
 export type UserInfo = {
-  +[userId: string]: {
-    +readyStatus: string,
-    +err: any,
-    +info: Object
-  }
+  +login: string,
+  +avatar_url: string,
+  +name: string,
+  +company: string,
+  +blog: string,
+  +location: string,
+  +email: string,
+  +bio: string,
+  +public_repos: string,
+  +created_at: any
 };
 
 // State
@@ -29,9 +35,9 @@ export type Action =
   | { type: 'USERS_REQUESTING' }
   | { type: 'USERS_SUCCESS', data: Array<Object> }
   | { type: 'USERS_FAILURE', err: any }
-  | { type: 'USER_REQUESTING', userId: string }
-  | { type: 'USER_SUCCESS', userId: string, data: Object }
-  | { type: 'USER_FAILURE', userId: string, err: any };
+  | { type: 'USER_REQUESTING', userName: string }
+  | { type: 'USER_SUCCESS', userName: string, data: Object }
+  | { type: 'USER_FAILURE', userName: string, err: any };
 
 export type Dispatch = (
   action: Action | ThunkAction | PromiseAction | Array<Action>

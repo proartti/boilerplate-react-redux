@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticRouter } from 'react-router-dom';
 
-import NotFound from '../index';
+import NotFound from '../../../containers/NotFound';
 
 describe('<NotFound />', () => {
   test('renders', () => {

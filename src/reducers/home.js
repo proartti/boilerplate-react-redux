@@ -9,24 +9,26 @@ type State = Home;
 const initialState = {
   readyStatus: 'USERS_INVALID',
   err: null,
-  list: []
+  user: {},
+  home: null
 };
 
 export default (state: State = initialState, action: Action): State => {
+  console.log('action.type', action.type);
   switch (action.type) {
-    case 'USERS_REQUESTING':
+    case 'USER_REQUESTING':
       return fp.assign(state, {
-        readyStatus: 'USERS_REQUESTING'
+        readyStatus: 'USER_REQUESTING'
       });
-    case 'USERS_FAILURE':
+    case 'USER_FAILURE':
       return fp.assign(state, {
-        readyStatus: 'USERS_FAILURE',
+        readyStatus: 'USER_FAILURE',
         err: action.err
       });
-    case 'USERS_SUCCESS':
+    case 'USER_SUCCESS':
       return fp.assign(state, {
-        readyStatus: 'USERS_SUCCESS',
-        list: action.data
+        readyStatus: 'USER_SUCCESS',
+        user: action.data
       });
     default:
       return state;
