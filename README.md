@@ -13,18 +13,14 @@ You need to be running [the latest node LTS](https://nodejs.org/en/download/) or
 ```bash
 git clone https://github.com/proartti/boilerplate-react-redux.git
 cd boilerplate-react-redux
-npm install
-npm start
 
-
-yarn
+npm install    # install packages
+npm start      # start server
 ```
 
 or
 
 ```bash
-git clone https://github.com/proartti/boilerplate-react-redux.git
-cd boilerplate-react-redux
 yarn          # install packages
 yarn start    # start server
 ```
@@ -112,8 +108,6 @@ This boilerplate takes refrences in other super cools repos:
 * Also https://github.com/reactjs/redux/tree/master/examples/real-world
 
 ## ToDo
-
-## Todo...
 
 There're some features (updates) which will be included in this starter in the near future:
 
